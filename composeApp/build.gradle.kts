@@ -20,6 +20,11 @@ kotlin {
 
         ios.deploymentTarget = "16.6"
 
+        // Sample pod dependency
+        pod("LoremIpsum") {
+            version = "~> 1.0"
+        }
+
         framework {
             baseName = "ComposeApp"
             isStatic = true
@@ -34,6 +39,12 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+        }
+
+        all {
+            languageSettings {
+                optIn("kotlinx.cinterop.ExperimentalForeignApi")
+            }
         }
     }
 }

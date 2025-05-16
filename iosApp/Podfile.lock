@@ -1,15 +1,22 @@
 PODS:
-  - composeApp (1.0-SNAPSHOT)
+  - composeApp (1.0-SNAPSHOT):
+    - LoremIpsum (~> 1.0)
+  - LoremIpsum (1.0.0)
 
 DEPENDENCIES:
   - composeApp (from `../composeApp`)
+
+SPEC REPOS:
+  trunk:
+    - LoremIpsum
 
 EXTERNAL SOURCES:
   composeApp:
     :path: "../composeApp"
 
 SPEC CHECKSUMS:
-  composeApp: c754ccad2c17987cadd4c14059c1a4a0b1c5900f
+  composeApp: 3adee98abccf4808437977fbccff60f6a556d377
+  LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
 
 PODFILE CHECKSUM: 4cd416da3d21d86625a8d4558f1d10d6a1c5e370
 
