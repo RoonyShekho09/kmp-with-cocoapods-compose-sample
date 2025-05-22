@@ -1,6 +1,6 @@
 package org.jetbrains.kotlin.compose.sample
 
-import cocoapods.LoremIpsum.LoremIpsum
+import org.jetbrains.kotlin.lorem.Ipsum
 
 class Greeting {
     private val platform = getPlatform()
@@ -9,7 +9,7 @@ class Greeting {
         return "Hello, ${platform.name}!"
     }
 
-    fun greetWithPod(): String {
-        return LoremIpsum.sentence().orEmpty()
+    fun greetWithDependency(): String {
+        return Ipsum().sentence()
     }
 }

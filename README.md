@@ -11,10 +11,13 @@ Demonstrates integrating Compose Multiplatform UI into an iOS-only KMP project, 
 
 ## Structure
 
-* **`:composeApp`**: The single KMP Gradle module.
+* **`:composeApp`**: The Compose App Gradle module.
     * Contains all shared Compose UI code (`commonMain`).
     * Includes iOS-specific configurations and the entry point for Compose (`iosMain`).
     * `build.gradle.kts` declares Compose Multiplatform dependencies and configures CocoaPods for Compose integration.
+* **`:lorem-ipsum`**: A sample shared library module.
+    * Contains shared code.
+    * Have a CocoaPods dependency.
 * **`iosApp`**: Native iOS application project (Xcode).
     * Hosts the Compose UI via a `UIViewController`.
     * Consumes the framework produced by the `:composeApp` module.

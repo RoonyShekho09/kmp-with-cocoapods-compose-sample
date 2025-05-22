@@ -20,9 +20,13 @@ kotlin {
 
         ios.deploymentTarget = "16.6"
 
-        // Sample pod dependency
+        /*
+         * https://youtrack.jetbrains.com/issue/KT-41830/
+         * Only link against pods the library (lorem-ipsum) depends on.
+         */
         pod("LoremIpsum") {
             version = "~> 1.0"
+            linkOnly = true
         }
 
         framework {
@@ -39,6 +43,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(projects.loremIpsum)
         }
 
         all {
