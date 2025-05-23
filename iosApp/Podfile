@@ -7,7 +7,6 @@ target 'iosApp' do
   platform :ios, deployment_target
   # Pods for iosApp
   pod 'composeApp', :path => '../composeApp'
-  pod 'GoogleSignIn', '~> 8.0.0'
 end
 
 post_install do |installer|
