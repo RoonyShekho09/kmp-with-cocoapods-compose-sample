@@ -24,9 +24,10 @@ kotlin {
          * https://youtrack.jetbrains.com/issue/KT-41830/
          * Only link against pods the library (lorem-ipsum) depends on.
          */
-        pod("LoremIpsum") {
-            version = "~> 1.0"
+        pod("GoogleSignIn") {
+            version = "8.0.0"
             linkOnly = true
+            extraOpts += listOf("-compiler-option", "-fmodules")
         }
 
         framework {

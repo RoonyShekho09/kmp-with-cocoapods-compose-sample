@@ -16,8 +16,9 @@ kotlin {
         // We don't need a podspec for a module dependency
         noPodspec()
 
-        pod("LoremIpsum") {
-            version = "~> 1.0"
+        pod("GoogleSignIn") {
+            version = "8.0.0"
+            extraOpts += listOf("-compiler-option", "-fmodules")
         }
     }
 
